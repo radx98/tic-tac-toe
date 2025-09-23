@@ -40,6 +40,13 @@ h1 {
   margin-bottom: 1rem;
 }
 
+h3 {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 0.8;
+  margin-bottom: 2.4rem;
+}
+
 button {
   border-radius: 12px;
   border: 0 solid transparent;
