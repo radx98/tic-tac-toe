@@ -33,18 +33,10 @@ export function makeMove(prev: GameState, index: number) {
     }
 
     //draw check
-    let draw = true
-    for (let i = 0; i < 9; i++) {
-        if (newState.board[i] === null || newState.winner === null) {
-            draw = false
-            break
-        }
+    const boardFilled = newState.board.every(val => val != null)
+    if (boardFilled && newState.winner === null) {
+         newState.winner = 'draw'
     }
-    if (draw === true) {
-        newState.winner = 'draw'
-    }
-
-    console.log(newState)
 
     return newState  
 }
