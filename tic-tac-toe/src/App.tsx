@@ -16,7 +16,9 @@ export default function App() {
   }
 
   function cellClicked(index: number) {
-    setGameState(makeMove(gameState, index))
+    if (gameState.winner === null) {
+      setGameState(makeMove(gameState, index))
+    }
   }
 
   return <>
